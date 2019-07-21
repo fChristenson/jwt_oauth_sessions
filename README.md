@@ -20,11 +20,16 @@ What we most commonly use this system for is to check if a user has logged in to
 
 The flow goes like this:
 
-```
-User tries to access private page -> session cookie is missing -> we send user to login page ->
-user logs in -> we create a session cookie and set it in the browser ->
-user tries to access private page -> session cookie is included -> user gets to page
-```
+
+* User tries to access private page
+* session cookie is missing
+* we send user to login page
+* user logs in
+* we create a session cookie and set it in the browser
+* user tries to access private page
+* session cookie is included
+* user gets to page
+
 
 ### JWT
 
@@ -81,3 +86,13 @@ data we want so we can create a session.
 
 There are other use cases for oauth that has nothing to do with login but this is the one you
 likely are most familiar with.
+
+The flow usually goes:
+
+
+* User tries to login
+* we redirect the user to a oauth provider
+* oauth provider validates the user
+* oauth provider redirects the user back to us with a access token
+* we use the access token to get the users account information
+* we create a session for the user
