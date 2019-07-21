@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>I will allow the oauth provider to share my data with oauthApp</h1>
+  <form action="/consent" method="POST">
+    <input type="submit" value="Accept">
+    <input type="hidden" name="code" value="<%= validationCode %>">
+  </form>
+</body>
+</html>
